@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PaddleScript : MonoBehaviour
 {
+    private float mouseposX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,8 @@ public class PaddleScript : MonoBehaviour
     void Update()
     {
         //Moves the paddle left and right based on user input
-        transform.Translate(Time.deltaTime * Input.GetAxis("Horizontal") * 20.0f, 0, 0);
+        //mouseposX = Input.mousePosition.x;
+        //this.transform.position.x = mouseposX;
+        this.Transform.position.x = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
     }
 }

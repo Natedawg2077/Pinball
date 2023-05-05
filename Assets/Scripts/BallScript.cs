@@ -9,6 +9,8 @@ public class BallScript : MonoBehaviour
     int score = 0;
     public Text scoreText;
     public Text MessageText;
+    AudioSource myAudio;
+
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +18,7 @@ public class BallScript : MonoBehaviour
         //Giving the text objects a start value
         string scoreText = "Score: " + score;
         string MessageText = "";
+        myAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,6 +31,7 @@ public class BallScript : MonoBehaviour
     {
         //Says in the console when the ball collides with an object and what object it collided with
         Debug.Log("Ball has collided with " + otherObject.gameObject.name);
+              myAudio.Play();
 
         //Increases the score when the ball touches another object
         score++;
