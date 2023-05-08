@@ -16,6 +16,7 @@ public class BallScript : MonoBehaviour
         //Giving the text objects a start value
         string scoreText = "Score: " + score;
         string MessageText = "";
+
     }
 
     // Update is called once per frame

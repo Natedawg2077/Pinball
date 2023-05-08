@@ -15,5 +15,6 @@ public class PaddleScript : MonoBehaviour
     {
         //Moves the paddle left and right based on user input
         transform.Translate(Time.deltaTime * Input.GetAxis("Horizontal") * 20.0f, 0, 0);
+
     }
 }
